@@ -34,12 +34,12 @@ class ControlView extends GetWidget<AuthViewModel> {
                   BottomNavigationBarItem(
                       activeIcon: const Padding(
                         padding: EdgeInsets.only(top: 25),
-                        child: Text('Explore'),
+                        child: Text('Home'),
                       ),
                       icon: Padding(
                         padding: const EdgeInsets.only(top: 20),
                         child: Image.asset(
-                          'assets/images/mouse.png',
+                          'assets/images/home.png',
                           fit: BoxFit.contain,
                           width: 15,
                         ),

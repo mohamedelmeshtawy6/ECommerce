@@ -79,7 +79,7 @@ class HomeView extends GetWidget<HomeViewModel> {
     return GetBuilder<HomeViewModel>(
       builder: (con) => SingleChildScrollView(
         child: SizedBox(
-          height: 120,
+          height: 135,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: con.categoryModel.length,
@@ -91,7 +91,7 @@ class HomeView extends GetWidget<HomeViewModel> {
                         borderRadius: BorderRadius.circular(50),
                         color: Colors.grey.shade100),
                     height: 60,
-                    width: 60,
+                    width: MediaQuery.of(context).size.width / 5,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Image.network(

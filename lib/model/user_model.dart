@@ -8,10 +8,10 @@ class UserModel {
   UserModel({this.userId, this.name, this.email, this.picture});
 
   UserModel.fromJson(Map<dynamic, dynamic> map) {
-    userId = map['userId'];
-    name = map['name'];
-    email = map['email'];
-    picture = map['picture'];
+    userId = map['userId'] ?? '';
+    name = map['name'] ?? '';
+    email = map['email'] ?? '';
+    picture = map['picture'] ?? '';
   }
 
   toJson() {

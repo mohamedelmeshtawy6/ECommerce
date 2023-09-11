@@ -1,6 +1,7 @@
 import 'package:e_commerce/constance.dart';
 import 'package:e_commerce/core/view_model/cart_viewmodel.dart';
 import 'package:e_commerce/view/checkout/checkout_view.dart';
+import 'package:e_commerce/view/printer_page.dart';
 import 'package:e_commerce/view/widgets/custom_button.dart';
 import 'package:e_commerce/view/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -138,9 +139,14 @@ class CartView extends StatelessWidget {
                           width: 120,
                           height: 50,
                           child: CustomButton(
-                              text: 'CHECKOUT',
+                              text: 'Print',
                               onpress: () {
-                                Get.to(() => const CheckoutView());
+                                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => PrintPage(data: controller.cartProductModel,total:controller.totlaPrice ),
+                        ),
+                      );
                               }))
                     ],
                   ),
